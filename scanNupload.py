@@ -27,7 +27,7 @@ def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
-#application = Flask(__name__)
+application = Flask(__name__)
 
 @application.route("/",methods=['GET', 'POST'])
 @application.route("/home",methods=['GET', 'POST'])
