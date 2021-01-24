@@ -8,10 +8,10 @@ from PIL import Image
 import uuid
 import pytesseract
 
-
+MYDIR = os.path.dirname(__file__)
 UPLOAD_FOLDER = os.path.dirname(os.path.abspath(__file__)) 
-TEXT_FOLDER=os.path.join(UPLOAD_FOLDER,'media/texts')
-UPLOAD_FOLDER=os.path.join(UPLOAD_FOLDER,'media/images')
+TEXT_FOLDER=os.path.join(MYDIR,'/media/texts')
+UPLOAD_FOLDER=os.path.join(MYDIR,'/media/images')
 
 
 ALLOWED_EXTENSIONS = {'jpg', 'jpeg','png','JPG','JPEG','PNG'}
