@@ -2,20 +2,27 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>ScanNupload</title>
-	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='static/bootstrap.min.css')}}">
-	<link rel="stylesheet" type="text/css" href="static/main.css">
-	<link rel="stylesheet" type="text/css" href="static/mystyle.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
 
 </head>
 <body>
-<section class="wrapper">
+<section class="container">
 <h2 class="h2 mt-0 text-center jumbo">Image Upload and Save</h2>
 <div class="container-fluid mt-5">
 <div class="row m-0">
 <div class="col-sm-6 col-md-6">
-<form method="post" enctype="multipart/form-data">
+<form method="post" enctype="multipart/form-data" class="form-control ">
 
   <!--<label class="file">-->
   <p><input type="file" id="imgInp" name="file"></p>
@@ -26,7 +33,7 @@
 
   <input type="file" id="imgInp" class="input-btn" name="file_source" size="40">
    <img src="{{ user_image }}" id="img-upload" alt="User Image" class="img-upload"/>    -->
-   <p><input type=submit value=Upload></p>
+	<p><button type='submit' value='Upload' class="btn btn-warning" > Submit</button></p>
 	 
 </form>
 </div>
