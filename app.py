@@ -46,7 +46,7 @@ def index():
             filename = secure_filename(file.filename)
             tname=str(uuid.uuid4())
             filename2=tname+'.png'	    
-            file.save(os.path.join(application.config['UPLOAD_FOLDER'],filename2))         
+            file.save(os.path.join(UPLOAD_FOLDER,filename2))         
             result = path.split("/")
             filename2 = result[-1:]
             print("fname :" ,filename2)
