@@ -18,11 +18,13 @@
 </head>
 <body>
 <section class="wrapper">
+	<div class="d-flex justify-content-start">
 		<form action="{{url_for('edit_results')}}" method="post" class="form-control">
 				<input type="text" name="image_path" value='{{content[1]}}' hidden><br><br>
 				<textarea name="text"rows="20" cols="50">{{content[0]}}</textarea>
 				<input type="submit" class ="btn btn-warning">
 			</form>
+	</div>
 		<a href="{{url_for('index')}}"><button type='submit' class="btn btn-info">return to homepage</button></a> 
 </section>
 
