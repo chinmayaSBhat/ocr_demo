@@ -3,20 +3,27 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>ScanNupload</title>
-	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='static/bootstrap.min.css')}}">
-	<link rel="stylesheet" type="text/css" href="static/main.css">
-	<link rel="stylesheet" type="text/css" href="static/mystyle.css">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+		<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </head>
 <body>
 <section class="wrapper">
-		<form action="{{url_for('edit_results')}}" method="post">
+		<form action="{{url_for('edit_results')}}" method="post" class="form-control">
 				<input type="text" name="image_path" value='{{content[1]}}' hidden><br><br>
 				<textarea name="text"rows="20" cols="50">{{content[0]}}</textarea>
-				<input type="submit">
+				<input type="submit" class ="btn btn-warning">
 			</form>
-		<a href="{{url_for('index')}}"><button type='submit'>return to homepage</button></a> 
+		<a href="{{url_for('index')}}"><button type='submit' class="btn btn-info">return to homepage</button></a> 
 </section>
 
 
