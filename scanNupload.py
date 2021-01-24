@@ -30,7 +30,7 @@ def allowed_file(filename):
 application = Flask(__name__)
 
 @application.route("/",methods=['GET', 'POST'])
-@application.route("/home",methods=['GET', 'POST'])
+#@application.route("/home",methods=['GET', 'POST'])
 def index():
     path=''
     if request.method == 'POST':
