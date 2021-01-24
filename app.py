@@ -11,7 +11,7 @@ import pytesseract
 MYDIR = os.path.dirname(__file__)
 print(MYDIR)
 UPLOAD_FOLDER = os.path.dirname(os.path.abspath(__file__)) 
-TEXT_FOLDER=os.path.join(MYDIR,'/media/texts')
+TEXT_FOLDER=os.path.join(MYDIR,'./media/texts')
 UPLOAD_FOLDER=os.path.join(MYDIR,'./media/images')
 
 
