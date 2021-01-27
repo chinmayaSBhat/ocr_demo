@@ -8,6 +8,9 @@ from PIL import Image
 import uuid
 import pytesseract
 
+
+
+
 MYDIR = os.path.dirname(__file__)
 print(MYDIR)
 UPLOAD_FOLDER = os.path.dirname(os.path.abspath(__file__)) 
@@ -44,16 +47,18 @@ def index():
             print('No file selected')
             return redirect(request.url)
         if file and allowed_file(file.filename):
-            filename = secure_filename(file.filename)
-            tname=str(uuid.uuid4())
-            filename2=tname+'.png'	    
-            file.save(os.path.join(UPLOAD_FOLDER,filename2))         
-            result = path.split("/")
-            filename2 = result[-1:]
-            print("fname :" ,filename2)
-            filename1 = " ".join(filename2)  
-            
-            return redirect(url_for('result',image_path=tname))  
+            try:
+                filename = secure_filename(file.filename)
+                tname=str(uuid.uuid4())
+                filename2=tname+'.png'	    
+                file.save(os.path.join(UPLOAD_FOLDER,filename2))         
+                result = path.split("/")
+                filename2 = result[-1:]
+                print("fname :" ,filename2)
+                filename1 = " ".join(filename2)  
+
+                return redirect(url_for('result',image_path=tname))  
+            except return "<h3> it's taking too long to repond. please try again later</h3>"
       
     return render_template('index1.html')
     
