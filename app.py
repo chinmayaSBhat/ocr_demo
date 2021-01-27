@@ -58,7 +58,7 @@ def index():
                 filename1 = " ".join(filename2)  
 
                 return redirect(url_for('result',image_path=tname))  
-            except return "<h3> it's taking too long to repond. please try again later</h3>"
+            except "it's taking too long to repond. please try again later"
       
     return render_template('index1.html')
     
